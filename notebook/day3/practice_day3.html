@@ -1,0 +1,3446 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>3.1. 고용산재보험 가입 현황 적용 &#8212; 파이썬 프로그래밍의 기초와 데이터 활용 방법</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook/day3/practice_day3';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="3. 데이터프레임 실습" href="day_intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">파이썬 프로그래밍의 기초와 데이터 활용 방법</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../index.html">
+                    ????
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../day1/intro-python.html">1. 파이썬 소개</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../day1/basic-expression.html">1.1. 파이썬 표현식의 기초</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../day2/dataframe.html">2. 데이터프레임</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../day2/dataframe_introduction.html">2.1. 데이터프레임의 정의 및 행과 열선택</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../day2/dataframe_summary.html">2.2. 데이터프레임의 요약</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../day2/dataframe_group.html">2.3. 데이터 그룹화</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../day2/dataframe_merge.html">2.4. 데이터프레임의 결합</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="day_intro.html">3. 데이터프레임 실습</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.1. 고용산재보험 가입 현황 적용</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/jiieunshin/welfare/blob/master/notebook/day3/practice_day3.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/jiieunshin/welfare" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/notebook/day3/practice_day3.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>고용산재보험 가입 현황 적용</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">고용산재보험 데이터</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">산재 및 고용보험 성립 연도별, 시도별 평균 근로자수, 전체 사업장 수, 가입되지 않은 사업장 수 계산</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">산재 기준 데이터 생성</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">고용 기준 데이터 생성</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">연도별 음식점에 대한 가입된 사업장의 수</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1><span class="section-number">3.1. </span>고용산재보험 가입 현황 적용<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<p>2일차에서 <code class="docutils literal notranslate"><span class="pre">pandas</span></code>패키지의 <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>구조의 데이터에 대해 <code class="docutils literal notranslate"><span class="pre">merge</span></code> 및 <code class="docutils literal notranslate"><span class="pre">group</span></code>함수를 이용하여 데이터를 조작하는 법을 배웠다. 이때, 실제 데이터가 아닌 완성된 데이터의 일부를 이용하여 진행했다. 이번 시간에는 raw data(아무것도 하지 않은 데이터)를 이용하여 원하는 결과를 확인하는 과정을 가지고자 한다.</p>
+<p>이번 시간의 목표는 2일차 때 사용한 데이터를 고용산재보험 가입 현황데이터를 이용하여 생성하는 것이다. 목표는 다음과 같다.</p>
+<p>2022년 제외하고,</p>
+<ol class="arabic simple">
+<li><p>2010년 이후 산재 및 고용보험 성립 연도별, 시도별 평균 근로자수 및 가입된 사업장 수 계산</p></li>
+<li><p>2017년 이후 산재 및 고용보험 성립 연도별, 시도별 음식점에 대한 사업장 수 계산</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="id2">
+<h2>고용산재보험 데이터<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<p>데이터들은 각각 서울, 대구, 대전, 부산, 서울, 울산, 인천에 대해 csv파일이 각각 저장되어 있다. 이들을 모두 읽고 확인해본다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gj_dat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://uos-bigdata.github.io/lab_data/docs/assets/data_lab_bokji/dat_practice_gwangju.csv&quot;</span><span class="p">)</span>
+<span class="n">dg_dat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://uos-bigdata.github.io/lab_data/docs/assets/data_lab_bokji/dat_practice_daegu.csv&quot;</span><span class="p">)</span>
+<span class="n">dj_dat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://uos-bigdata.github.io/lab_data/docs/assets/data_lab_bokji/dat_practice_daejeon.csv&quot;</span><span class="p">)</span>
+<span class="n">bs_dat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://uos-bigdata.github.io/lab_data/docs/assets/data_lab_bokji/dat_practice_pusan.csv&quot;</span><span class="p">)</span>
+<span class="n">sl_dat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://uos-bigdata.github.io/lab_data/docs/assets/data_lab_bokji/dat_practice_seoul.csv&quot;</span><span class="p">)</span>
+<span class="n">us_dat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://uos-bigdata.github.io/lab_data/docs/assets/data_lab_bokji/dat_practice_ulsan.csv&quot;</span><span class="p">)</span>
+<span class="n">ic_dat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://uos-bigdata.github.io/lab_data/docs/assets/data_lab_bokji/dat_practice_incheon.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sl_dat</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>연번</th>
+      <th>보험구분</th>
+      <th>사업장명</th>
+      <th>우편번호</th>
+      <th>사업장주소</th>
+      <th>고용보험업종코드</th>
+      <th>고용보험업종명</th>
+      <th>산재보험성립일자</th>
+      <th>고용보험성립일자</th>
+      <th>산재보험상시근로자수</th>
+      <th>고용보험상시근로자수</th>
+      <th>산재사업구분</th>
+      <th>고용사업구분</th>
+      <th>사업자등록번호</th>
+      <th>시도</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>전체</td>
+      <td>김구동(부동산)</td>
+      <td>7238</td>
+      <td>서울 영등포구 국회대로72길 11</td>
+      <td>74100.0</td>
+      <td>사업시설 유지관리 서비스업</td>
+      <td>2010-07-01</td>
+      <td>2010-07-01</td>
+      <td>1</td>
+      <td>1</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1.071384e+09</td>
+      <td>서울</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>전체</td>
+      <td>바우피엔피</td>
+      <td>4546</td>
+      <td>서울 중구 을지로33길 16</td>
+      <td>20202.0</td>
+      <td>합성수지 및 기타 플라스틱 물질 제조업</td>
+      <td>2014-01-01</td>
+      <td>2014-01-01</td>
+      <td>2</td>
+      <td>2</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1.010109e+09</td>
+      <td>서울</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>전체</td>
+      <td>토탈사인대광부식</td>
+      <td>7291</td>
+      <td>서울특별시 영등포구  영등포로18길 2-3</td>
+      <td>18119.0</td>
+      <td>기타 인쇄업</td>
+      <td>2008-04-01</td>
+      <td>2008-04-01</td>
+      <td>3</td>
+      <td>3</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1.010113e+09</td>
+      <td>서울</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>5</td>
+      <td>전체</td>
+      <td>한서전자</td>
+      <td>4545</td>
+      <td>서울 중구 청계천로 160</td>
+      <td>46521.0</td>
+      <td>가전제품 및 부품 도매업</td>
+      <td>2000-07-01</td>
+      <td>1998-10-01</td>
+      <td>5</td>
+      <td>5</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1.010113e+09</td>
+      <td>서울</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>6</td>
+      <td>전체</td>
+      <td>삼진상사</td>
+      <td>8217</td>
+      <td>서울 구로구 경인로53길 15</td>
+      <td>46595.0</td>
+      <td>전기용 기계장비 및 관련 기자재 도매업</td>
+      <td>2000-07-01</td>
+      <td>1998-10-01</td>
+      <td>1</td>
+      <td>1</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1.010113e+09</td>
+      <td>서울</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>이들은 각각 <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>으로 저장되어 있다. <code class="docutils literal notranslate"><span class="pre">pd.concat</span></code>함수를 이용해서 row를 기준으로 합치는 작업을 진행한다.</p>
+<p>이때, <code class="docutils literal notranslate"><span class="pre">pandas</span></code> 패키지 내에 <code class="docutils literal notranslate"><span class="pre">concat</span></code>함수를 이용하면 된다. 이는 <code class="docutils literal notranslate"><span class="pre">merge</span></code>랑 다른 의미의 함수이다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tmp_dat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">gj_dat</span><span class="p">,</span> <span class="n">dg_dat</span><span class="p">,</span> <span class="n">dj_dat</span><span class="p">,</span> <span class="n">bs_dat</span><span class="p">,</span> <span class="n">sl_dat</span><span class="p">,</span> <span class="n">us_dat</span><span class="p">,</span> <span class="n">ic_dat</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tmp_dat</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 1066598 entries, 0 to 117092
+Data columns (total 15 columns):
+ #   Column      Non-Null Count    Dtype  
+---  ------      --------------    -----  
+ 0   연번          1066598 non-null  int64  
+ 1   보험구분        1066598 non-null  object 
+ 2   사업장명        1066597 non-null  object 
+ 3   우편번호        1066598 non-null  int64  
+ 4   사업장주소       1066598 non-null  object 
+ 5   고용보험업종코드    1032051 non-null  float64
+ 6   고용보험업종명     1032051 non-null  object 
+ 7   산재보험성립일자    1060177 non-null  object 
+ 8   고용보험성립일자    1032047 non-null  object 
+ 9   산재보험상시근로자수  1066598 non-null  int64  
+ 10  고용보험상시근로자수  1066598 non-null  int64  
+ 11  산재사업구분      1060177 non-null  object 
+ 12  고용사업구분      1032056 non-null  object 
+ 13  사업자등록번호     1066412 non-null  object 
+ 14  시도          1066598 non-null  object 
+dtypes: float64(1), int64(4), object(10)
+memory usage: 130.2+ MB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tmp_dat</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>연번</th>
+      <th>보험구분</th>
+      <th>사업장명</th>
+      <th>우편번호</th>
+      <th>사업장주소</th>
+      <th>고용보험업종코드</th>
+      <th>고용보험업종명</th>
+      <th>산재보험성립일자</th>
+      <th>고용보험성립일자</th>
+      <th>산재보험상시근로자수</th>
+      <th>고용보험상시근로자수</th>
+      <th>산재사업구분</th>
+      <th>고용사업구분</th>
+      <th>사업자등록번호</th>
+      <th>시도</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>696</td>
+      <td>전체</td>
+      <td>남해상사</td>
+      <td>12724</td>
+      <td>경기 광주시 곤지암읍 새재길190번길 31-14</td>
+      <td>13999.0</td>
+      <td>그 외 기타 분류 안된 섬유제품 제조업</td>
+      <td>2014-06-15</td>
+      <td>2014-06-15</td>
+      <td>1</td>
+      <td>1</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1010366494.0</td>
+      <td>광주</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1279</td>
+      <td>전체</td>
+      <td>MK스타일</td>
+      <td>12817</td>
+      <td>경기도 광주시 도척면 도척로699번길30-61</td>
+      <td>13221.0</td>
+      <td>침구 및 관련제품 제조업</td>
+      <td>2013-04-01</td>
+      <td>2013-04-01</td>
+      <td>2</td>
+      <td>2</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1010614643.0</td>
+      <td>광주</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1597</td>
+      <td>전체</td>
+      <td>무등중기</td>
+      <td>62073</td>
+      <td>광주 서구 매월2로15번길 16</td>
+      <td>42600.0</td>
+      <td>건설장비 운영업</td>
+      <td>2020-08-26</td>
+      <td>2020-08-26</td>
+      <td>1</td>
+      <td>1</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1010711172.0</td>
+      <td>광주</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1615</td>
+      <td>전체</td>
+      <td>아이투비</td>
+      <td>12787</td>
+      <td>경기 광주시 태봉로 110</td>
+      <td>23221.0</td>
+      <td>가정용 및 장식용 도자기 제조업</td>
+      <td>2012-01-12</td>
+      <td>2012-01-12</td>
+      <td>2</td>
+      <td>2</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1010715412.0</td>
+      <td>광주</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2185</td>
+      <td>전체</td>
+      <td>바우</td>
+      <td>12769</td>
+      <td>경기 광주시 광남안로 483</td>
+      <td>46742.0</td>
+      <td>직물 도매업</td>
+      <td>2010-04-01</td>
+      <td>2010-04-01</td>
+      <td>1</td>
+      <td>1</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1010887591.0</td>
+      <td>광주</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>사업자등록번호가 문자형으로 지정되어 있는 것을 알 수 있다. 즉, 사업자등록번호 중 몇개의 값이 문자의 형태로 저장되었다는 것을 의미한다.</p>
+</section>
+<section id="id3">
+<h2>산재 및 고용보험 성립 연도별, 시도별 평균 근로자수, 전체 사업장 수, 가입되지 않은 사업장 수 계산<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<p>이 작업을 하기 위해서는 총 2가지 작업을 진행해야 한다.</p>
+<ol class="arabic simple">
+<li><p>산재 관련 변수들의 연도별, 시도별 시도별 평균 근로자수, 전체 사업장 수, 가입되지 않은 사업장 수를 계산</p></li>
+<li><p>고용 관련 변수들의 연도별, 시도별 시도별 평균 근로자수, 전체 사업장 수, 가입되지 않은 사업장 수를 계산</p></li>
+<li><p>(1.), (2.)에서 생성한 데이터를 결합</p></li>
+</ol>
+<p>(1.), (2.)을 구분하는 이유는 산재보험성립일자 및 고용보험성립일자의 연도가 반드시 같다는 보장이 없으며, 가입되지 않은 것도 제각각이기 때문이다. 먼저 산재 관련한 데이터 셋을 생성할건데, 데이터에 연도 관련 변수가 없으므로, 먼저 연도를 생성하자.</p>
+<p>산재보험성립일자에서 연도를 생성하는 방법은 2가지이다.</p>
+<ol class="arabic simple">
+<li><p>앞에서 4자리를 자르는것</p></li>
+<li><p>이 변수를 날짜형으로 저장하고, 연도만 추출하는것</p></li>
+</ol>
+<p>우리는 두번째 방법을 이용하여 연도를 생성한다. 날짜형으로 저장하기 위해 <code class="docutils literal notranslate"><span class="pre">pandas</span></code>패키지안에 <code class="docutils literal notranslate"><span class="pre">to_datetime</span></code> method를 이용한다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tmp_dat</span><span class="p">[</span><span class="s1">&#39;산재보험성립일자&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">tmp_dat</span><span class="p">[</span><span class="s1">&#39;산재보험성립일자&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tmp_dat</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 1066598 entries, 0 to 117092
+Data columns (total 15 columns):
+ #   Column      Non-Null Count    Dtype         
+---  ------      --------------    -----         
+ 0   연번          1066598 non-null  int64         
+ 1   보험구분        1066598 non-null  object        
+ 2   사업장명        1066597 non-null  object        
+ 3   우편번호        1066598 non-null  int64         
+ 4   사업장주소       1066598 non-null  object        
+ 5   고용보험업종코드    1032051 non-null  float64       
+ 6   고용보험업종명     1032051 non-null  object        
+ 7   산재보험성립일자    1060177 non-null  datetime64[ns]
+ 8   고용보험성립일자    1032047 non-null  object        
+ 9   산재보험상시근로자수  1066598 non-null  int64         
+ 10  고용보험상시근로자수  1066598 non-null  int64         
+ 11  산재사업구분      1060177 non-null  object        
+ 12  고용사업구분      1032056 non-null  object        
+ 13  사업자등록번호     1066412 non-null  object        
+ 14  시도          1066598 non-null  object        
+dtypes: datetime64[ns](1), float64(1), int64(4), object(9)
+memory usage: 130.2+ MB
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">산재보험성립일자</span></code>의 Dtype을 보면 처음 읽었을때랑 다르게 datetime64로 변경 되었음을 확인 할 수 있다.</p>
+<p>다음으로 연도를 추출하기 위해 <code class="docutils literal notranslate"><span class="pre">dt</span></code> method의 <code class="docutils literal notranslate"><span class="pre">year</span></code>함수를 이용한다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tmp_dat</span><span class="p">[</span><span class="s2">&quot;산재_year&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp_dat</span><span class="p">[</span><span class="s2">&quot;산재보험성립일자&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span>
+
+<span class="n">tmp_dat</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>연번</th>
+      <th>보험구분</th>
+      <th>사업장명</th>
+      <th>우편번호</th>
+      <th>사업장주소</th>
+      <th>고용보험업종코드</th>
+      <th>고용보험업종명</th>
+      <th>산재보험성립일자</th>
+      <th>고용보험성립일자</th>
+      <th>산재보험상시근로자수</th>
+      <th>고용보험상시근로자수</th>
+      <th>산재사업구분</th>
+      <th>고용사업구분</th>
+      <th>사업자등록번호</th>
+      <th>시도</th>
+      <th>산재_year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>696</td>
+      <td>전체</td>
+      <td>남해상사</td>
+      <td>12724</td>
+      <td>경기 광주시 곤지암읍 새재길190번길 31-14</td>
+      <td>13999.0</td>
+      <td>그 외 기타 분류 안된 섬유제품 제조업</td>
+      <td>2014-06-15</td>
+      <td>2014-06-15</td>
+      <td>1</td>
+      <td>1</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1010366494.0</td>
+      <td>광주</td>
+      <td>2014.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1279</td>
+      <td>전체</td>
+      <td>MK스타일</td>
+      <td>12817</td>
+      <td>경기도 광주시 도척면 도척로699번길30-61</td>
+      <td>13221.0</td>
+      <td>침구 및 관련제품 제조업</td>
+      <td>2013-04-01</td>
+      <td>2013-04-01</td>
+      <td>2</td>
+      <td>2</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1010614643.0</td>
+      <td>광주</td>
+      <td>2013.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1597</td>
+      <td>전체</td>
+      <td>무등중기</td>
+      <td>62073</td>
+      <td>광주 서구 매월2로15번길 16</td>
+      <td>42600.0</td>
+      <td>건설장비 운영업</td>
+      <td>2020-08-26</td>
+      <td>2020-08-26</td>
+      <td>1</td>
+      <td>1</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1010711172.0</td>
+      <td>광주</td>
+      <td>2020.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1615</td>
+      <td>전체</td>
+      <td>아이투비</td>
+      <td>12787</td>
+      <td>경기 광주시 태봉로 110</td>
+      <td>23221.0</td>
+      <td>가정용 및 장식용 도자기 제조업</td>
+      <td>2012-01-12</td>
+      <td>2012-01-12</td>
+      <td>2</td>
+      <td>2</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1010715412.0</td>
+      <td>광주</td>
+      <td>2012.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2185</td>
+      <td>전체</td>
+      <td>바우</td>
+      <td>12769</td>
+      <td>경기 광주시 광남안로 483</td>
+      <td>46742.0</td>
+      <td>직물 도매업</td>
+      <td>2010-04-01</td>
+      <td>2010-04-01</td>
+      <td>1</td>
+      <td>1</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1010887591.0</td>
+      <td>광주</td>
+      <td>2010.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>같은 방법으로 <code class="docutils literal notranslate"><span class="pre">고용보험성립일자</span></code>의 연도를 생성한다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tmp_dat</span><span class="p">[</span><span class="s1">&#39;고용보험성립일자&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">tmp_dat</span><span class="p">[</span><span class="s1">&#39;고용보험성립일자&#39;</span><span class="p">])</span>
+<span class="n">tmp_dat</span><span class="p">[</span><span class="s2">&quot;고용_year&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp_dat</span><span class="p">[</span><span class="s2">&quot;고용보험성립일자&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span>
+
+<span class="n">tmp_dat</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 1066598 entries, 0 to 117092
+Data columns (total 17 columns):
+ #   Column      Non-Null Count    Dtype         
+---  ------      --------------    -----         
+ 0   연번          1066598 non-null  int64         
+ 1   보험구분        1066598 non-null  object        
+ 2   사업장명        1066597 non-null  object        
+ 3   우편번호        1066598 non-null  int64         
+ 4   사업장주소       1066598 non-null  object        
+ 5   고용보험업종코드    1032051 non-null  float64       
+ 6   고용보험업종명     1032051 non-null  object        
+ 7   산재보험성립일자    1060177 non-null  datetime64[ns]
+ 8   고용보험성립일자    1032047 non-null  datetime64[ns]
+ 9   산재보험상시근로자수  1066598 non-null  int64         
+ 10  고용보험상시근로자수  1066598 non-null  int64         
+ 11  산재사업구분      1060177 non-null  object        
+ 12  고용사업구분      1032056 non-null  object        
+ 13  사업자등록번호     1066412 non-null  object        
+ 14  시도          1066598 non-null  object        
+ 15  산재_year     1060177 non-null  float64       
+ 16  고용_year     1032047 non-null  float64       
+dtypes: datetime64[ns](2), float64(3), int64(4), object(8)
+memory usage: 146.5+ MB
+</pre></div>
+</div>
+</div>
+</div>
+<p>산재보험성립일자 및 고용보험성립일자의 결측치의 갯수는 다음과 같다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">tmp_dat</span><span class="p">[</span><span class="s2">&quot;산재보험성립일자&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="n">tmp_dat</span><span class="p">[</span><span class="s2">&quot;고용보험성립일자&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[6421, 34551]
+</pre></div>
+</div>
+</div>
+</div>
+<p>각각 2632개, 32963개의 결측값을 포함하고 있다. 그러므로, 연도별, 시도별로 계산하기 위해, boolean변수를 생성한다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tmp_dat</span><span class="p">[</span><span class="s2">&quot;산재_bool&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp_dat</span><span class="p">[</span><span class="s2">&quot;산재보험성립일자&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span>
+<span class="n">tmp_dat</span><span class="p">[</span><span class="s2">&quot;고용_bool&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp_dat</span><span class="p">[</span><span class="s2">&quot;고용보험성립일자&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span>
+
+<span class="n">tmp_dat</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>연번</th>
+      <th>보험구분</th>
+      <th>사업장명</th>
+      <th>우편번호</th>
+      <th>사업장주소</th>
+      <th>고용보험업종코드</th>
+      <th>고용보험업종명</th>
+      <th>산재보험성립일자</th>
+      <th>고용보험성립일자</th>
+      <th>산재보험상시근로자수</th>
+      <th>고용보험상시근로자수</th>
+      <th>산재사업구분</th>
+      <th>고용사업구분</th>
+      <th>사업자등록번호</th>
+      <th>시도</th>
+      <th>산재_year</th>
+      <th>고용_year</th>
+      <th>산재_bool</th>
+      <th>고용_bool</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>696</td>
+      <td>전체</td>
+      <td>남해상사</td>
+      <td>12724</td>
+      <td>경기 광주시 곤지암읍 새재길190번길 31-14</td>
+      <td>13999.0</td>
+      <td>그 외 기타 분류 안된 섬유제품 제조업</td>
+      <td>2014-06-15</td>
+      <td>2014-06-15</td>
+      <td>1</td>
+      <td>1</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1010366494.0</td>
+      <td>광주</td>
+      <td>2014.0</td>
+      <td>2014.0</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1279</td>
+      <td>전체</td>
+      <td>MK스타일</td>
+      <td>12817</td>
+      <td>경기도 광주시 도척면 도척로699번길30-61</td>
+      <td>13221.0</td>
+      <td>침구 및 관련제품 제조업</td>
+      <td>2013-04-01</td>
+      <td>2013-04-01</td>
+      <td>2</td>
+      <td>2</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1010614643.0</td>
+      <td>광주</td>
+      <td>2013.0</td>
+      <td>2013.0</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1597</td>
+      <td>전체</td>
+      <td>무등중기</td>
+      <td>62073</td>
+      <td>광주 서구 매월2로15번길 16</td>
+      <td>42600.0</td>
+      <td>건설장비 운영업</td>
+      <td>2020-08-26</td>
+      <td>2020-08-26</td>
+      <td>1</td>
+      <td>1</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1010711172.0</td>
+      <td>광주</td>
+      <td>2020.0</td>
+      <td>2020.0</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1615</td>
+      <td>전체</td>
+      <td>아이투비</td>
+      <td>12787</td>
+      <td>경기 광주시 태봉로 110</td>
+      <td>23221.0</td>
+      <td>가정용 및 장식용 도자기 제조업</td>
+      <td>2012-01-12</td>
+      <td>2012-01-12</td>
+      <td>2</td>
+      <td>2</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1010715412.0</td>
+      <td>광주</td>
+      <td>2012.0</td>
+      <td>2012.0</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2185</td>
+      <td>전체</td>
+      <td>바우</td>
+      <td>12769</td>
+      <td>경기 광주시 광남안로 483</td>
+      <td>46742.0</td>
+      <td>직물 도매업</td>
+      <td>2010-04-01</td>
+      <td>2010-04-01</td>
+      <td>1</td>
+      <td>1</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1010887591.0</td>
+      <td>광주</td>
+      <td>2010.0</td>
+      <td>2010.0</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<section id="id4">
+<h3>산재 기준 데이터 생성<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<p>산재 기준으로 데이터를 생성해보자. 먼저 연도별, 시도별로 산재보험상시근로자수를 계산해보자.</p>
+<p>먼저, 필요한 변수 선택 및 생성한다. 이때, 산재_year가 결측값이면, 산재_bool도 결측값이 생성된다. 그러므로, 고용_bool에 대한 합을 계산하여 산재보험은 가입했지만, 고용보험은 가입하지 않은 수를 계산한다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">san_dat</span> <span class="o">=</span> <span class="n">tmp_dat</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="p">[</span><span class="s2">&quot;산재_year&quot;</span><span class="p">,</span> <span class="s2">&quot;시도&quot;</span><span class="p">,</span> <span class="s2">&quot;산재보험상시근로자수&quot;</span><span class="p">,</span> <span class="s2">&quot;고용_bool&quot;</span><span class="p">]]</span>
+<span class="n">san_dat</span><span class="p">[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>다음으로, <code class="docutils literal notranslate"><span class="pre">groupby</span></code> method와 <code class="docutils literal notranslate"><span class="pre">agg</span></code> method를 이용하여 산재보험상시근로자수는 <code class="docutils literal notranslate"><span class="pre">mean</span></code>함수, count는 <code class="docutils literal notranslate"><span class="pre">sum</span></code>함수를 계산한다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">san_agg_dat</span> <span class="o">=</span> <span class="n">san_dat</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;산재_year&quot;</span><span class="p">,</span> <span class="s2">&quot;시도&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&quot;산재보험상시근로자수&quot;</span> <span class="p">:</span> <span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="s2">&quot;고용_bool&quot;</span> <span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;count&quot;</span> <span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">reset_index</span></code> method를 이용하여 데이터를 정리한다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">san_agg_dat</span> <span class="o">=</span> <span class="n">san_agg_dat</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">san_agg_dat</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>산재_year</th>
+      <th>시도</th>
+      <th>산재보험상시근로자수</th>
+      <th>고용_bool</th>
+      <th>count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1960.0</td>
+      <td>부산</td>
+      <td>25.000000</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1960.0</td>
+      <td>서울</td>
+      <td>16.000000</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1960.0</td>
+      <td>인천</td>
+      <td>38.000000</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1962.0</td>
+      <td>부산</td>
+      <td>61.000000</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1964.0</td>
+      <td>광주</td>
+      <td>165.000000</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>406</th>
+      <td>2021.0</td>
+      <td>인천</td>
+      <td>2.604997</td>
+      <td>703</td>
+      <td>15648</td>
+    </tr>
+    <tr>
+      <th>407</th>
+      <td>2022.0</td>
+      <td>광주</td>
+      <td>1.000000</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>408</th>
+      <td>2022.0</td>
+      <td>대구</td>
+      <td>1.000000</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>409</th>
+      <td>2022.0</td>
+      <td>대전</td>
+      <td>6.500000</td>
+      <td>2</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>410</th>
+      <td>2022.0</td>
+      <td>부산</td>
+      <td>1.000000</td>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+<p>411 rows × 5 columns</p>
+</div></div></div>
+</div>
+<p>이제, 2010년 이상, 2021년 이하의 데이터를 추출한다. 이번 예시에서는 해당사항이 아니지만, 주의해야 할 점은 결측값(<code class="docutils literal notranslate"><span class="pre">NaN</span></code>)은 어떤 비교연산자를 이용하더라도 모두 <code class="docutils literal notranslate"><span class="pre">False</span></code>를 출력한다는 것이다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tmp_ind</span> <span class="o">=</span> <span class="p">(</span><span class="n">san_agg_dat</span><span class="p">[</span><span class="s2">&quot;산재_year&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2010</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">san_agg_dat</span><span class="p">[</span><span class="s2">&quot;산재_year&quot;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2021</span><span class="p">)</span>
+<span class="n">san_agg_dat</span> <span class="o">=</span> <span class="n">san_agg_dat</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">tmp_ind</span><span class="p">,</span> <span class="p">:]</span>
+
+<span class="n">san_agg_dat</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>산재_year</th>
+      <th>시도</th>
+      <th>산재보험상시근로자수</th>
+      <th>고용_bool</th>
+      <th>count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>323</th>
+      <td>2010.0</td>
+      <td>광주</td>
+      <td>6.863187</td>
+      <td>52</td>
+      <td>1820</td>
+    </tr>
+    <tr>
+      <th>324</th>
+      <td>2010.0</td>
+      <td>대구</td>
+      <td>7.366627</td>
+      <td>82</td>
+      <td>2523</td>
+    </tr>
+    <tr>
+      <th>325</th>
+      <td>2010.0</td>
+      <td>대전</td>
+      <td>9.100746</td>
+      <td>59</td>
+      <td>1340</td>
+    </tr>
+    <tr>
+      <th>326</th>
+      <td>2010.0</td>
+      <td>부산</td>
+      <td>8.126126</td>
+      <td>121</td>
+      <td>3108</td>
+    </tr>
+    <tr>
+      <th>327</th>
+      <td>2010.0</td>
+      <td>서울</td>
+      <td>10.971553</td>
+      <td>343</td>
+      <td>11741</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>402</th>
+      <td>2021.0</td>
+      <td>대전</td>
+      <td>2.658709</td>
+      <td>434</td>
+      <td>7917</td>
+    </tr>
+    <tr>
+      <th>403</th>
+      <td>2021.0</td>
+      <td>부산</td>
+      <td>2.874647</td>
+      <td>688</td>
+      <td>17367</td>
+    </tr>
+    <tr>
+      <th>404</th>
+      <td>2021.0</td>
+      <td>서울</td>
+      <td>7.487265</td>
+      <td>2375</td>
+      <td>59009</td>
+    </tr>
+    <tr>
+      <th>405</th>
+      <td>2021.0</td>
+      <td>울산</td>
+      <td>3.442591</td>
+      <td>273</td>
+      <td>5095</td>
+    </tr>
+    <tr>
+      <th>406</th>
+      <td>2021.0</td>
+      <td>인천</td>
+      <td>2.604997</td>
+      <td>703</td>
+      <td>15648</td>
+    </tr>
+  </tbody>
+</table>
+<p>84 rows × 5 columns</p>
+</div></div></div>
+</div>
+<p>마지막으로 변수명들을 정리하자.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">san_agg_dat</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;연도&quot;</span><span class="p">,</span> <span class="s2">&quot;시도&quot;</span><span class="p">,</span> <span class="s2">&quot;산재_평균근로자수&quot;</span><span class="p">,</span> <span class="s2">&quot;산재만_가입된사업장수&quot;</span><span class="p">,</span> <span class="s2">&quot;산재_가입된사업장수&quot;</span><span class="p">]</span>
+<span class="n">san_agg_dat</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>연도</th>
+      <th>시도</th>
+      <th>산재_평균근로자수</th>
+      <th>산재만_가입된사업장수</th>
+      <th>산재_가입된사업장수</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>323</th>
+      <td>2010.0</td>
+      <td>광주</td>
+      <td>6.863187</td>
+      <td>52</td>
+      <td>1820</td>
+    </tr>
+    <tr>
+      <th>324</th>
+      <td>2010.0</td>
+      <td>대구</td>
+      <td>7.366627</td>
+      <td>82</td>
+      <td>2523</td>
+    </tr>
+    <tr>
+      <th>325</th>
+      <td>2010.0</td>
+      <td>대전</td>
+      <td>9.100746</td>
+      <td>59</td>
+      <td>1340</td>
+    </tr>
+    <tr>
+      <th>326</th>
+      <td>2010.0</td>
+      <td>부산</td>
+      <td>8.126126</td>
+      <td>121</td>
+      <td>3108</td>
+    </tr>
+    <tr>
+      <th>327</th>
+      <td>2010.0</td>
+      <td>서울</td>
+      <td>10.971553</td>
+      <td>343</td>
+      <td>11741</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>402</th>
+      <td>2021.0</td>
+      <td>대전</td>
+      <td>2.658709</td>
+      <td>434</td>
+      <td>7917</td>
+    </tr>
+    <tr>
+      <th>403</th>
+      <td>2021.0</td>
+      <td>부산</td>
+      <td>2.874647</td>
+      <td>688</td>
+      <td>17367</td>
+    </tr>
+    <tr>
+      <th>404</th>
+      <td>2021.0</td>
+      <td>서울</td>
+      <td>7.487265</td>
+      <td>2375</td>
+      <td>59009</td>
+    </tr>
+    <tr>
+      <th>405</th>
+      <td>2021.0</td>
+      <td>울산</td>
+      <td>3.442591</td>
+      <td>273</td>
+      <td>5095</td>
+    </tr>
+    <tr>
+      <th>406</th>
+      <td>2021.0</td>
+      <td>인천</td>
+      <td>2.604997</td>
+      <td>703</td>
+      <td>15648</td>
+    </tr>
+  </tbody>
+</table>
+<p>84 rows × 5 columns</p>
+</div></div></div>
+</div>
+<p>여기서, 산재만_가입된사업장수의 의미는 연도, 시도별로 산재가 가입된 연도에, 고용보험이 가입되지 않은 사업장 수를 의미하는 것이다.</p>
+</section>
+<section id="id5">
+<h3>고용 기준 데이터 생성<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<p>위에 산재 기준을 생성시킨 데이터를 고용 기준으로 데이터를 생성한다. 산재 데이터 생성과 같은 방식으로 생성한다.</p>
+<p>먼저, 필요 변수 선택 및 생성을 진행한다. 마찬가지로, 고용_year가 결측값이면, 고용_bool도 결측값이 생성된다. 그러므로, 산재_bool에 대한 합을 계산하여 고용보험은 가입했지만, 산재보험은 가입하지 않은 수를 계산한다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">go_dat</span> <span class="o">=</span> <span class="n">tmp_dat</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="p">[</span><span class="s2">&quot;고용_year&quot;</span><span class="p">,</span> <span class="s2">&quot;시도&quot;</span><span class="p">,</span> <span class="s2">&quot;고용보험상시근로자수&quot;</span><span class="p">,</span> <span class="s2">&quot;산재_bool&quot;</span><span class="p">]]</span>
+<span class="n">go_dat</span><span class="p">[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>다음으로, <code class="docutils literal notranslate"><span class="pre">groupby</span></code> method와 <code class="docutils literal notranslate"><span class="pre">agg</span></code> method를 이용하여 고용보험상시근로자수는 <code class="docutils literal notranslate"><span class="pre">mean</span></code>함수, count는 <code class="docutils literal notranslate"><span class="pre">sum</span></code>함수를 계산한다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">go_agg_dat</span> <span class="o">=</span> <span class="n">go_dat</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;고용_year&quot;</span><span class="p">,</span> <span class="s2">&quot;시도&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&quot;고용보험상시근로자수&quot;</span> <span class="p">:</span> <span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="s2">&quot;산재_bool&quot;</span> <span class="p">:</span> <span class="nb">sum</span><span class="p">,</span> <span class="s2">&quot;count&quot;</span> <span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">reset_index</span></code> method를 이용하여 데이터를 정리한다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">go_agg_dat</span> <span class="o">=</span> <span class="n">go_agg_dat</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">go_agg_dat</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>고용_year</th>
+      <th>시도</th>
+      <th>고용보험상시근로자수</th>
+      <th>산재_bool</th>
+      <th>count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1977.0</td>
+      <td>서울</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1978.0</td>
+      <td>서울</td>
+      <td>1.000000</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1981.0</td>
+      <td>서울</td>
+      <td>1.000000</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1989.0</td>
+      <td>부산</td>
+      <td>18.000000</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1991.0</td>
+      <td>서울</td>
+      <td>16.000000</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>193</th>
+      <td>2021.0</td>
+      <td>울산</td>
+      <td>2.080108</td>
+      <td>262</td>
+      <td>5193</td>
+    </tr>
+    <tr>
+      <th>194</th>
+      <td>2021.0</td>
+      <td>인천</td>
+      <td>1.916362</td>
+      <td>444</td>
+      <td>15615</td>
+    </tr>
+    <tr>
+      <th>195</th>
+      <td>2022.0</td>
+      <td>광주</td>
+      <td>0.500000</td>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>196</th>
+      <td>2022.0</td>
+      <td>대전</td>
+      <td>12.000000</td>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>197</th>
+      <td>2022.0</td>
+      <td>부산</td>
+      <td>1.000000</td>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+<p>198 rows × 5 columns</p>
+</div></div></div>
+</div>
+<p>2010년 이상, 2020년 이하의 데이터를 추출한다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tmp_ind</span> <span class="o">=</span> <span class="p">(</span><span class="n">go_agg_dat</span><span class="p">[</span><span class="s2">&quot;고용_year&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2010</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">go_agg_dat</span><span class="p">[</span><span class="s1">&#39;고용_year&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2021</span><span class="p">)</span>
+<span class="n">go_agg_dat</span> <span class="o">=</span> <span class="n">go_agg_dat</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">tmp_ind</span><span class="p">,</span> <span class="p">:]</span>
+
+<span class="n">go_agg_dat</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>고용_year</th>
+      <th>시도</th>
+      <th>고용보험상시근로자수</th>
+      <th>산재_bool</th>
+      <th>count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>111</th>
+      <td>2010.0</td>
+      <td>광주</td>
+      <td>6.847419</td>
+      <td>1</td>
+      <td>1763</td>
+    </tr>
+    <tr>
+      <th>112</th>
+      <td>2010.0</td>
+      <td>대구</td>
+      <td>7.051240</td>
+      <td>7</td>
+      <td>2420</td>
+    </tr>
+    <tr>
+      <th>113</th>
+      <td>2010.0</td>
+      <td>대전</td>
+      <td>8.816680</td>
+      <td>3</td>
+      <td>1271</td>
+    </tr>
+    <tr>
+      <th>114</th>
+      <td>2010.0</td>
+      <td>부산</td>
+      <td>7.622692</td>
+      <td>11</td>
+      <td>2979</td>
+    </tr>
+    <tr>
+      <th>115</th>
+      <td>2010.0</td>
+      <td>서울</td>
+      <td>10.869985</td>
+      <td>30</td>
+      <td>11391</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>190</th>
+      <td>2021.0</td>
+      <td>대전</td>
+      <td>1.887973</td>
+      <td>369</td>
+      <td>8007</td>
+    </tr>
+    <tr>
+      <th>191</th>
+      <td>2021.0</td>
+      <td>부산</td>
+      <td>1.909389</td>
+      <td>660</td>
+      <td>17680</td>
+    </tr>
+    <tr>
+      <th>192</th>
+      <td>2021.0</td>
+      <td>서울</td>
+      <td>2.020801</td>
+      <td>1410</td>
+      <td>58700</td>
+    </tr>
+    <tr>
+      <th>193</th>
+      <td>2021.0</td>
+      <td>울산</td>
+      <td>2.080108</td>
+      <td>262</td>
+      <td>5193</td>
+    </tr>
+    <tr>
+      <th>194</th>
+      <td>2021.0</td>
+      <td>인천</td>
+      <td>1.916362</td>
+      <td>444</td>
+      <td>15615</td>
+    </tr>
+  </tbody>
+</table>
+<p>84 rows × 5 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">go_agg_dat</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;연도&quot;</span><span class="p">,</span> <span class="s2">&quot;시도&quot;</span><span class="p">,</span> <span class="s2">&quot;고용_평균근로자수&quot;</span><span class="p">,</span> <span class="s2">&quot;고용만_가입된사업장수&quot;</span><span class="p">,</span> <span class="s2">&quot;고용_가입된사업장수&quot;</span><span class="p">]</span>
+<span class="n">go_agg_dat</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>연도</th>
+      <th>시도</th>
+      <th>고용_평균근로자수</th>
+      <th>고용만_가입된사업장수</th>
+      <th>고용_가입된사업장수</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>111</th>
+      <td>2010.0</td>
+      <td>광주</td>
+      <td>6.847419</td>
+      <td>1</td>
+      <td>1763</td>
+    </tr>
+    <tr>
+      <th>112</th>
+      <td>2010.0</td>
+      <td>대구</td>
+      <td>7.051240</td>
+      <td>7</td>
+      <td>2420</td>
+    </tr>
+    <tr>
+      <th>113</th>
+      <td>2010.0</td>
+      <td>대전</td>
+      <td>8.816680</td>
+      <td>3</td>
+      <td>1271</td>
+    </tr>
+    <tr>
+      <th>114</th>
+      <td>2010.0</td>
+      <td>부산</td>
+      <td>7.622692</td>
+      <td>11</td>
+      <td>2979</td>
+    </tr>
+    <tr>
+      <th>115</th>
+      <td>2010.0</td>
+      <td>서울</td>
+      <td>10.869985</td>
+      <td>30</td>
+      <td>11391</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>190</th>
+      <td>2021.0</td>
+      <td>대전</td>
+      <td>1.887973</td>
+      <td>369</td>
+      <td>8007</td>
+    </tr>
+    <tr>
+      <th>191</th>
+      <td>2021.0</td>
+      <td>부산</td>
+      <td>1.909389</td>
+      <td>660</td>
+      <td>17680</td>
+    </tr>
+    <tr>
+      <th>192</th>
+      <td>2021.0</td>
+      <td>서울</td>
+      <td>2.020801</td>
+      <td>1410</td>
+      <td>58700</td>
+    </tr>
+    <tr>
+      <th>193</th>
+      <td>2021.0</td>
+      <td>울산</td>
+      <td>2.080108</td>
+      <td>262</td>
+      <td>5193</td>
+    </tr>
+    <tr>
+      <th>194</th>
+      <td>2021.0</td>
+      <td>인천</td>
+      <td>1.916362</td>
+      <td>444</td>
+      <td>15615</td>
+    </tr>
+  </tbody>
+</table>
+<p>84 rows × 5 columns</p>
+</div></div></div>
+</div>
+<p>여기서, 고용만_가입된사업장수의 의미는 각 연도, 시도별로 고용이 가입된 연도에, 산재보험이 가입되지 않은 사업장 수를 의미하는 것이다.</p>
+<p>마지막으로, 두 데이터셋을 <code class="docutils literal notranslate"><span class="pre">merge</span></code> 함수를 이용하여 결합한다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">join_dat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">san_agg_dat</span><span class="p">,</span> <span class="n">go_agg_dat</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;연도&quot;</span><span class="p">,</span> <span class="s2">&quot;시도&quot;</span><span class="p">])</span>
+
+<span class="n">join_dat</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>연도</th>
+      <th>시도</th>
+      <th>산재_평균근로자수</th>
+      <th>산재만_가입된사업장수</th>
+      <th>산재_가입된사업장수</th>
+      <th>고용_평균근로자수</th>
+      <th>고용만_가입된사업장수</th>
+      <th>고용_가입된사업장수</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2010.0</td>
+      <td>광주</td>
+      <td>6.863187</td>
+      <td>52</td>
+      <td>1820</td>
+      <td>6.847419</td>
+      <td>1</td>
+      <td>1763</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2010.0</td>
+      <td>대구</td>
+      <td>7.366627</td>
+      <td>82</td>
+      <td>2523</td>
+      <td>7.051240</td>
+      <td>7</td>
+      <td>2420</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2010.0</td>
+      <td>대전</td>
+      <td>9.100746</td>
+      <td>59</td>
+      <td>1340</td>
+      <td>8.816680</td>
+      <td>3</td>
+      <td>1271</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2010.0</td>
+      <td>부산</td>
+      <td>8.126126</td>
+      <td>121</td>
+      <td>3108</td>
+      <td>7.622692</td>
+      <td>11</td>
+      <td>2979</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2010.0</td>
+      <td>서울</td>
+      <td>10.971553</td>
+      <td>343</td>
+      <td>11741</td>
+      <td>10.869985</td>
+      <td>30</td>
+      <td>11391</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>2021.0</td>
+      <td>대전</td>
+      <td>2.658709</td>
+      <td>434</td>
+      <td>7917</td>
+      <td>1.887973</td>
+      <td>369</td>
+      <td>8007</td>
+    </tr>
+    <tr>
+      <th>80</th>
+      <td>2021.0</td>
+      <td>부산</td>
+      <td>2.874647</td>
+      <td>688</td>
+      <td>17367</td>
+      <td>1.909389</td>
+      <td>660</td>
+      <td>17680</td>
+    </tr>
+    <tr>
+      <th>81</th>
+      <td>2021.0</td>
+      <td>서울</td>
+      <td>7.487265</td>
+      <td>2375</td>
+      <td>59009</td>
+      <td>2.020801</td>
+      <td>1410</td>
+      <td>58700</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>2021.0</td>
+      <td>울산</td>
+      <td>3.442591</td>
+      <td>273</td>
+      <td>5095</td>
+      <td>2.080108</td>
+      <td>262</td>
+      <td>5193</td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td>2021.0</td>
+      <td>인천</td>
+      <td>2.604997</td>
+      <td>703</td>
+      <td>15648</td>
+      <td>1.916362</td>
+      <td>444</td>
+      <td>15615</td>
+    </tr>
+  </tbody>
+</table>
+<p>84 rows × 8 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">join_dat</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../전체_사업장.csv&quot;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="id6">
+<h2>연도별 음식점에 대한 가입된 사업장의 수<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h2>
+<p>음식점만 집중적으로 살펴봤을때, 산재 및 고용보험은 일반적으로 가게를 새로 열거나, 새로운 사람 혹은 아르바이트 생을 뽑았을때 가입을 할 것이다. 그렇다면, 코로나 집중기간이였던 2020년에는 과연 가입된 사업장 수가 감소했을까??? 비교 대상으로는 2016년부터 2019년까지 4년치의 데이터를 비교한다.</p>
+<p>이를 얻기 위해서는 음식점에 대한 데이터를 생성하여, 연도별, 시도별로 가입된 사업장수를 살펴보고자 한다. 그러기 위해서는 고용보험업종코드 앞의 2자리가 <code class="docutils literal notranslate"><span class="pre">56</span></code>인 데이터를 가져와야 한다. 따라서, 고용보험업종코드에서 앞의 2자리를 저장하고, <code class="docutils literal notranslate"><span class="pre">56</span></code>만 가져오는 작업을 진행한다.</p>
+<p>그러기 위해 <code class="docutils literal notranslate"><span class="pre">str.slice()</span></code>를 사용할 건데, 이는 <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>에서 하나의 column 혹은 row에 대해 일부를 자르고 싶을때 사용하는 method이다. 또한, 이 method는 문자열에 적용된다.</p>
+<p>먼저, 고용보험업종코드는 숫자형이므로 <code class="docutils literal notranslate"><span class="pre">astype</span></code> method를 이용해서 문자형으로 변형을 시켜준다.
+이후, <code class="docutils literal notranslate"><span class="pre">str.slice</span></code> method를 이용하여 앞의 2자리를 자른다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tmp_ser</span> <span class="o">=</span> <span class="n">tmp_dat</span><span class="p">[</span><span class="s2">&quot;고용보험업종코드&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">tmp_dat</span><span class="p">[</span><span class="s2">&quot;부분_고용보험업종코드&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp_ser</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">tmp_dat</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>연번</th>
+      <th>보험구분</th>
+      <th>사업장명</th>
+      <th>우편번호</th>
+      <th>사업장주소</th>
+      <th>고용보험업종코드</th>
+      <th>고용보험업종명</th>
+      <th>산재보험성립일자</th>
+      <th>고용보험성립일자</th>
+      <th>산재보험상시근로자수</th>
+      <th>고용보험상시근로자수</th>
+      <th>산재사업구분</th>
+      <th>고용사업구분</th>
+      <th>사업자등록번호</th>
+      <th>시도</th>
+      <th>산재_year</th>
+      <th>고용_year</th>
+      <th>산재_bool</th>
+      <th>고용_bool</th>
+      <th>부분_고용보험업종코드</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>696</td>
+      <td>전체</td>
+      <td>남해상사</td>
+      <td>12724</td>
+      <td>경기 광주시 곤지암읍 새재길190번길 31-14</td>
+      <td>13999.0</td>
+      <td>그 외 기타 분류 안된 섬유제품 제조업</td>
+      <td>2014-06-15</td>
+      <td>2014-06-15</td>
+      <td>1</td>
+      <td>1</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1010366494.0</td>
+      <td>광주</td>
+      <td>2014.0</td>
+      <td>2014.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1279</td>
+      <td>전체</td>
+      <td>MK스타일</td>
+      <td>12817</td>
+      <td>경기도 광주시 도척면 도척로699번길30-61</td>
+      <td>13221.0</td>
+      <td>침구 및 관련제품 제조업</td>
+      <td>2013-04-01</td>
+      <td>2013-04-01</td>
+      <td>2</td>
+      <td>2</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1010614643.0</td>
+      <td>광주</td>
+      <td>2013.0</td>
+      <td>2013.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1597</td>
+      <td>전체</td>
+      <td>무등중기</td>
+      <td>62073</td>
+      <td>광주 서구 매월2로15번길 16</td>
+      <td>42600.0</td>
+      <td>건설장비 운영업</td>
+      <td>2020-08-26</td>
+      <td>2020-08-26</td>
+      <td>1</td>
+      <td>1</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1010711172.0</td>
+      <td>광주</td>
+      <td>2020.0</td>
+      <td>2020.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1615</td>
+      <td>전체</td>
+      <td>아이투비</td>
+      <td>12787</td>
+      <td>경기 광주시 태봉로 110</td>
+      <td>23221.0</td>
+      <td>가정용 및 장식용 도자기 제조업</td>
+      <td>2012-01-12</td>
+      <td>2012-01-12</td>
+      <td>2</td>
+      <td>2</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1010715412.0</td>
+      <td>광주</td>
+      <td>2012.0</td>
+      <td>2012.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2185</td>
+      <td>전체</td>
+      <td>바우</td>
+      <td>12769</td>
+      <td>경기 광주시 광남안로 483</td>
+      <td>46742.0</td>
+      <td>직물 도매업</td>
+      <td>2010-04-01</td>
+      <td>2010-04-01</td>
+      <td>1</td>
+      <td>1</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1010887591.0</td>
+      <td>광주</td>
+      <td>2010.0</td>
+      <td>2010.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>46</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>그리고 생성된 변수가 문자로 <code class="docutils literal notranslate"><span class="pre">56</span></code>의 값을 가지는 데이터만 불러오자.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tmp_ind</span> <span class="o">=</span> <span class="n">tmp_dat</span><span class="p">[</span><span class="s2">&quot;부분_고용보험업종코드&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;56&quot;</span>
+<span class="n">sub_dat</span> <span class="o">=</span> <span class="n">tmp_dat</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">tmp_ind</span><span class="p">,</span> <span class="p">:]</span>
+
+<span class="n">sub_dat</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>연번</th>
+      <th>보험구분</th>
+      <th>사업장명</th>
+      <th>우편번호</th>
+      <th>사업장주소</th>
+      <th>고용보험업종코드</th>
+      <th>고용보험업종명</th>
+      <th>산재보험성립일자</th>
+      <th>고용보험성립일자</th>
+      <th>산재보험상시근로자수</th>
+      <th>고용보험상시근로자수</th>
+      <th>산재사업구분</th>
+      <th>고용사업구분</th>
+      <th>사업자등록번호</th>
+      <th>시도</th>
+      <th>산재_year</th>
+      <th>고용_year</th>
+      <th>산재_bool</th>
+      <th>고용_bool</th>
+      <th>부분_고용보험업종코드</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>13</th>
+      <td>4422</td>
+      <td>전체</td>
+      <td>돈가네김치찌개곤지암점</td>
+      <td>12804</td>
+      <td>경기 광주시 곤지암읍 경충대로 571</td>
+      <td>56111.0</td>
+      <td>한식 일반 음식점업</td>
+      <td>2020-01-28</td>
+      <td>2020-01-28</td>
+      <td>2</td>
+      <td>2</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1011562623.0</td>
+      <td>광주</td>
+      <td>2020.0</td>
+      <td>2020.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>56</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>4470</td>
+      <td>전체</td>
+      <td>윤장어</td>
+      <td>12768</td>
+      <td>경기 광주시 순암로 180</td>
+      <td>56114.0</td>
+      <td>한식 해산물요리 전문점</td>
+      <td>2020-08-17</td>
+      <td>2020-08-17</td>
+      <td>1</td>
+      <td>1</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1011613681.0</td>
+      <td>광주</td>
+      <td>2020.0</td>
+      <td>2020.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>56</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>4527</td>
+      <td>전체</td>
+      <td>무진장해물탕</td>
+      <td>62319</td>
+      <td>광주 광산구 목련로273번안길 61</td>
+      <td>56111.0</td>
+      <td>한식 일반 음식점업</td>
+      <td>2019-01-01</td>
+      <td>2019-01-01</td>
+      <td>0</td>
+      <td>0</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1011693313.0</td>
+      <td>광주</td>
+      <td>2019.0</td>
+      <td>2019.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>56</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>4986</td>
+      <td>전체</td>
+      <td>디저트39 광주상무점</td>
+      <td>61950</td>
+      <td>광주 서구 치평로 86</td>
+      <td>56221.0</td>
+      <td>커피 전문점</td>
+      <td>2019-07-01</td>
+      <td>2019-07-01</td>
+      <td>1</td>
+      <td>1</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1012566327.0</td>
+      <td>광주</td>
+      <td>2019.0</td>
+      <td>2019.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>56</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>4990</td>
+      <td>전체</td>
+      <td>이비가짬뽕(전남대점)</td>
+      <td>61220</td>
+      <td>광주 북구 용봉로 10</td>
+      <td>56121.0</td>
+      <td>중식 음식점업</td>
+      <td>2015-09-01</td>
+      <td>2015-09-01</td>
+      <td>16</td>
+      <td>16</td>
+      <td>계속</td>
+      <td>계속</td>
+      <td>1012572872.0</td>
+      <td>광주</td>
+      <td>2015.0</td>
+      <td>2015.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>56</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>이제 연도별, 시도별로 사업장의 갯수를 계산한다. 이때도 마찬가지로 <code class="docutils literal notranslate"><span class="pre">count</span></code>변수를 생성해 <code class="docutils literal notranslate"><span class="pre">sido</span></code>, <code class="docutils literal notranslate"><span class="pre">산재_year</span></code>, <code class="docutils literal notranslate"><span class="pre">고용_year</span></code>별로 계산한다.~~</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sub_dat</span><span class="p">[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">san_agg_dat</span> <span class="o">=</span> <span class="n">sub_dat</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;시도&quot;</span><span class="p">,</span> <span class="s2">&quot;산재_year&quot;</span><span class="p">])[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="s2">&quot;sum&quot;</span><span class="p">)</span>
+
+<span class="n">san_agg_dat</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\jieun\AppData\Local\Temp\ipykernel_36584\4066125944.py:1: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  sub_dat[&quot;count&quot;] = 1
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>시도  산재_year
+광주  1988.0        1
+    1999.0        1
+    2000.0       40
+    2001.0        4
+    2002.0       10
+               ... 
+인천  2017.0     1319
+    2018.0     1817
+    2019.0     2718
+    2020.0     2886
+    2021.0     2891
+Name: count, Length: 209, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">san_agg_dat</span> <span class="o">=</span> <span class="n">san_agg_dat</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="n">san_agg_dat</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>시도</th>
+      <th>산재_year</th>
+      <th>count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>광주</td>
+      <td>1988.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>광주</td>
+      <td>1999.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>광주</td>
+      <td>2000.0</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>광주</td>
+      <td>2001.0</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>광주</td>
+      <td>2002.0</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>204</th>
+      <td>인천</td>
+      <td>2017.0</td>
+      <td>1319</td>
+    </tr>
+    <tr>
+      <th>205</th>
+      <td>인천</td>
+      <td>2018.0</td>
+      <td>1817</td>
+    </tr>
+    <tr>
+      <th>206</th>
+      <td>인천</td>
+      <td>2019.0</td>
+      <td>2718</td>
+    </tr>
+    <tr>
+      <th>207</th>
+      <td>인천</td>
+      <td>2020.0</td>
+      <td>2886</td>
+    </tr>
+    <tr>
+      <th>208</th>
+      <td>인천</td>
+      <td>2021.0</td>
+      <td>2891</td>
+    </tr>
+  </tbody>
+</table>
+<p>209 rows × 3 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tmp_ind</span> <span class="o">=</span> <span class="p">(</span><span class="n">san_agg_dat</span><span class="p">[</span><span class="s2">&quot;산재_year&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2017</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">san_agg_dat</span><span class="p">[</span><span class="s1">&#39;산재_year&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2021</span><span class="p">)</span>
+<span class="n">san_agg_dat</span> <span class="o">=</span> <span class="n">san_agg_dat</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">tmp_ind</span><span class="p">,</span> <span class="p">:]</span>
+
+<span class="n">san_agg_dat</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>시도</th>
+      <th>산재_year</th>
+      <th>count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>19</th>
+      <td>광주</td>
+      <td>2017.0</td>
+      <td>796</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>광주</td>
+      <td>2018.0</td>
+      <td>1121</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>광주</td>
+      <td>2019.0</td>
+      <td>1674</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>광주</td>
+      <td>2020.0</td>
+      <td>1757</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>광주</td>
+      <td>2021.0</td>
+      <td>1727</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">san_agg_dat</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;시도&quot;</span><span class="p">,</span> <span class="s2">&quot;연도&quot;</span><span class="p">,</span> <span class="s2">&quot;산재_음식사업장수&quot;</span><span class="p">]</span>
+
+<span class="n">san_agg_dat</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>시도</th>
+      <th>연도</th>
+      <th>산재_음식사업장수</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>19</th>
+      <td>광주</td>
+      <td>2017.0</td>
+      <td>796</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>광주</td>
+      <td>2018.0</td>
+      <td>1121</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>광주</td>
+      <td>2019.0</td>
+      <td>1674</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>광주</td>
+      <td>2020.0</td>
+      <td>1757</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>광주</td>
+      <td>2021.0</td>
+      <td>1727</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>같은 형태로, 고용에 대해서 진행한다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sub_dat</span><span class="p">[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">go_agg_dat</span> <span class="o">=</span> <span class="n">sub_dat</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;시도&quot;</span><span class="p">,</span> <span class="s2">&quot;고용_year&quot;</span><span class="p">])[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="s2">&quot;sum&quot;</span><span class="p">)</span>
+
+<span class="n">go_agg_dat</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\jieun\AppData\Local\Temp\ipykernel_36584\2061023033.py:1: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  sub_dat[&quot;count&quot;] = 1
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>시도  고용_year
+광주  1998.0       27
+    1999.0        3
+    2000.0       12
+    2001.0        4
+    2002.0       10
+               ... 
+인천  2017.0     1318
+    2018.0     1835
+    2019.0     2731
+    2020.0     2892
+    2021.0     2898
+Name: count, Length: 177, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">go_agg_dat</span> <span class="o">=</span> <span class="n">go_agg_dat</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="n">go_agg_dat</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>시도</th>
+      <th>고용_year</th>
+      <th>count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>광주</td>
+      <td>1998.0</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>광주</td>
+      <td>1999.0</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>광주</td>
+      <td>2000.0</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>광주</td>
+      <td>2001.0</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>광주</td>
+      <td>2002.0</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>172</th>
+      <td>인천</td>
+      <td>2017.0</td>
+      <td>1318</td>
+    </tr>
+    <tr>
+      <th>173</th>
+      <td>인천</td>
+      <td>2018.0</td>
+      <td>1835</td>
+    </tr>
+    <tr>
+      <th>174</th>
+      <td>인천</td>
+      <td>2019.0</td>
+      <td>2731</td>
+    </tr>
+    <tr>
+      <th>175</th>
+      <td>인천</td>
+      <td>2020.0</td>
+      <td>2892</td>
+    </tr>
+    <tr>
+      <th>176</th>
+      <td>인천</td>
+      <td>2021.0</td>
+      <td>2898</td>
+    </tr>
+  </tbody>
+</table>
+<p>177 rows × 3 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tmp_ind</span> <span class="o">=</span> <span class="p">(</span><span class="n">go_agg_dat</span><span class="p">[</span><span class="s2">&quot;고용_year&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2017</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">go_agg_dat</span><span class="p">[</span><span class="s1">&#39;고용_year&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2021</span><span class="p">)</span>
+<span class="n">go_agg_dat</span> <span class="o">=</span> <span class="n">go_agg_dat</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">tmp_ind</span><span class="p">,</span> <span class="p">:]</span>
+
+<span class="n">go_agg_dat</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>시도</th>
+      <th>고용_year</th>
+      <th>count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>19</th>
+      <td>광주</td>
+      <td>2017.0</td>
+      <td>801</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>광주</td>
+      <td>2018.0</td>
+      <td>1136</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>광주</td>
+      <td>2019.0</td>
+      <td>1679</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>광주</td>
+      <td>2020.0</td>
+      <td>1763</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>광주</td>
+      <td>2021.0</td>
+      <td>1734</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">go_agg_dat</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;시도&quot;</span><span class="p">,</span> <span class="s2">&quot;연도&quot;</span><span class="p">,</span> <span class="s2">&quot;고용_음식사업장수&quot;</span><span class="p">]</span>
+
+<span class="n">go_agg_dat</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>시도</th>
+      <th>연도</th>
+      <th>고용_음식사업장수</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>19</th>
+      <td>광주</td>
+      <td>2017.0</td>
+      <td>801</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>광주</td>
+      <td>2018.0</td>
+      <td>1136</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>광주</td>
+      <td>2019.0</td>
+      <td>1679</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>광주</td>
+      <td>2020.0</td>
+      <td>1763</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>광주</td>
+      <td>2021.0</td>
+      <td>1734</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>두 데이터셋을 시도, 연도 기준으로 <code class="docutils literal notranslate"><span class="pre">merge</span></code>함수를 이용해서 합치자.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">join_dat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">san_agg_dat</span><span class="p">,</span> <span class="n">go_agg_dat</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;시도&quot;</span><span class="p">,</span> <span class="s2">&quot;연도&quot;</span><span class="p">])</span>
+
+<span class="n">join_dat</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>시도</th>
+      <th>연도</th>
+      <th>산재_음식사업장수</th>
+      <th>고용_음식사업장수</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>광주</td>
+      <td>2017.0</td>
+      <td>796</td>
+      <td>801</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>광주</td>
+      <td>2018.0</td>
+      <td>1121</td>
+      <td>1136</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>광주</td>
+      <td>2019.0</td>
+      <td>1674</td>
+      <td>1679</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>광주</td>
+      <td>2020.0</td>
+      <td>1757</td>
+      <td>1763</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>광주</td>
+      <td>2021.0</td>
+      <td>1727</td>
+      <td>1734</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>대구</td>
+      <td>2017.0</td>
+      <td>1367</td>
+      <td>1375</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>대구</td>
+      <td>2018.0</td>
+      <td>1739</td>
+      <td>1749</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>대구</td>
+      <td>2019.0</td>
+      <td>2523</td>
+      <td>2531</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>대구</td>
+      <td>2020.0</td>
+      <td>2428</td>
+      <td>2434</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>대구</td>
+      <td>2021.0</td>
+      <td>2619</td>
+      <td>2624</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>대전</td>
+      <td>2017.0</td>
+      <td>933</td>
+      <td>927</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>대전</td>
+      <td>2018.0</td>
+      <td>1093</td>
+      <td>1131</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>대전</td>
+      <td>2019.0</td>
+      <td>1588</td>
+      <td>1606</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>대전</td>
+      <td>2020.0</td>
+      <td>1767</td>
+      <td>1781</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>대전</td>
+      <td>2021.0</td>
+      <td>1634</td>
+      <td>1652</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>부산</td>
+      <td>2017.0</td>
+      <td>1713</td>
+      <td>1720</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>부산</td>
+      <td>2018.0</td>
+      <td>2159</td>
+      <td>2168</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>부산</td>
+      <td>2019.0</td>
+      <td>3205</td>
+      <td>3215</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>부산</td>
+      <td>2020.0</td>
+      <td>3508</td>
+      <td>3508</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>부산</td>
+      <td>2021.0</td>
+      <td>3829</td>
+      <td>3836</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>서울</td>
+      <td>2017.0</td>
+      <td>6069</td>
+      <td>6117</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>서울</td>
+      <td>2018.0</td>
+      <td>7967</td>
+      <td>8000</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>서울</td>
+      <td>2019.0</td>
+      <td>10576</td>
+      <td>10596</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>서울</td>
+      <td>2020.0</td>
+      <td>10612</td>
+      <td>10631</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>서울</td>
+      <td>2021.0</td>
+      <td>10752</td>
+      <td>10796</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>울산</td>
+      <td>2017.0</td>
+      <td>541</td>
+      <td>541</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>울산</td>
+      <td>2018.0</td>
+      <td>651</td>
+      <td>654</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>울산</td>
+      <td>2019.0</td>
+      <td>996</td>
+      <td>998</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>울산</td>
+      <td>2020.0</td>
+      <td>1137</td>
+      <td>1138</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>울산</td>
+      <td>2021.0</td>
+      <td>1046</td>
+      <td>1048</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>인천</td>
+      <td>2017.0</td>
+      <td>1319</td>
+      <td>1318</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>인천</td>
+      <td>2018.0</td>
+      <td>1817</td>
+      <td>1835</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>인천</td>
+      <td>2019.0</td>
+      <td>2718</td>
+      <td>2731</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>인천</td>
+      <td>2020.0</td>
+      <td>2886</td>
+      <td>2892</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>인천</td>
+      <td>2021.0</td>
+      <td>2891</td>
+      <td>2898</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">join_dat</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../음식_사업장.csv&quot;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>이렇게 1일차, 2일차에 사용한 데이터를 생성 할 수 있다.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebook\day3"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="day_intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>데이터프레임 실습</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">고용산재보험 데이터</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">산재 및 고용보험 성립 연도별, 시도별 평균 근로자수, 전체 사업장 수, 가입되지 않은 사업장 수 계산</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">산재 기준 데이터 생성</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">고용 기준 데이터 생성</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">연도별 음식점에 대한 가입된 사업장의 수</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By 서울시립대학교
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
