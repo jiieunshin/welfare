@@ -1,8 +1,8 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: ÆÄÀÌ½ã ÇÁ·Î±×·¡¹ÖÀÇ ±âÃÊ¿Í µ¥ÀÌÅÍ È°¿ë ¹æ¹ı
-author: ¼­¿ï½Ã¸³´ëÇĞ±³
+title: íŒŒì´ì¬ í”„ë¡œê·¸ë˜ë°ì˜ ê¸°ì´ˆì™€ ë°ì´í„° í™œìš© ë°©ë²•
+author: ì„œìš¸ì‹œë¦½ëŒ€í•™êµ
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -22,8 +22,8 @@ bibtex_bibfiles:
 # Information about where the book exists on the web
 repository:
   url: https://github.com/jiieunshin/welfare  # Online location of your book
-  path_to_book: doc  # Optional path to your book, relative to the repository root
-  branch: master  # Which branch of the repository should be used when creating links (optional)
+  path_to_book: ''  # Optional path to your book, relative to the repository root
+  # branch: master  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
