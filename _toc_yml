@@ -1,0 +1,19 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+format: jb-book
+root: index
+options: # The options key will be applied to all chapters, but not sub-sections.
+  numbered: 2
+chapters:
+  - file: notebook/day1/intro-python
+    sections:
+      - file: notebook/day1/basic-expression
+  - file: notebook/day2/dataframe
+    sections:
+      - file: notebook/day2/dataframe_introduction
+      - file: notebook/day2/dataframe_summary
+      - file: notebook/day2/dataframe_group
+      - file: notebook/day2/dataframe_merge
+  - file: notebook/day3/day_intro
+    sections:
+      - file: notebook/day3/practice_day3
