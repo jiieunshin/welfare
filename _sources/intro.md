@@ -1,27 +1,27 @@
-# °³¿ä
+# ê°œìš”
 
-ÀÌ »çÀÌÆ®´Â **±Ù·Îº¹Áö°ø´Ü ÀçÁ÷ÀÚ ±³À°**¿¡¼­ ºòµ¥ÀÌÅÍ ¿ª·®À» °­È­ÇÏ±â À§ÇÑ Àü¹®±³À°À» À§ÇÏ¿© ÆÄÀÌ½ã ÇÁ·Î±×·¡¹ÖÀÇ ±âÃÊ¿Í µ¥ÀÌÅÍÀÇ È°¿ë¿¡ ´ëÇÑ °­ÀÇ ±³Á¦¸¦ ¸ð¾Æ³õÀº  ¿Â¶óÀÎ ±³°ú¼­ÀÔ´Ï´Ù.
+ì´ ì‚¬ì´íŠ¸ëŠ” **ê·¼ë¡œë³µì§€ê³µë‹¨ ìž¬ì§ìž êµìœ¡**ì—ì„œ ë¹…ë°ì´í„° ì—­ëŸ‰ì„ ê°•í™”í•˜ê¸° ìœ„í•œ ì „ë¬¸êµìœ¡ì„ ìœ„í•˜ì—¬ íŒŒì´ì¬ í”„ë¡œê·¸ëž˜ë°ì˜ ê¸°ì´ˆì™€ ë°ì´í„°ì˜ í™œìš©ì— ëŒ€í•œ ê°•ì˜ êµì œë¥¼ ëª¨ì•„ë†“ì€  ì˜¨ë¼ì¸ êµê³¼ì„œìž…ë‹ˆë‹¤.
 
-## °ú¸ñ ¼³¸í 
+## ê³¼ëª© ì„¤ëª… 
 
-ºòµ¥ÀÌÅÍ ¿ª·®À» °­È­ÇÏ±â À§ÇÏ¿© ÆÄÀÌ½ã ÇÁ·Î±×·¡¹ÖÀÇ ±âÃÊ¿Í µ¥ÀÌÅÍÀÇ È°¿ë¿¡ ÇÁ·Î±×·¡¹Ö ±âÃÊÀûÀÎ Áö½Ä°ú ¹æ¹ýÀ» ÅëÇÕÀûÀ¸·Î ÇÐ½ÀÇÏ°í µ¥ÀÌÅÍ¿Í °ü·ÃµÈ ´Ù¾çÇÑ È°¿ë ¹æ¹ýÀ» ¼Ò°³ÇÏ´Â °­ÀÇ °ú¸ñÀÔ´Ï´Ù. 
+ë¹…ë°ì´í„° ì—­ëŸ‰ì„ ê°•í™”í•˜ê¸° ìœ„í•˜ì—¬ íŒŒì´ì¬ í”„ë¡œê·¸ëž˜ë°ì˜ ê¸°ì´ˆì™€ ë°ì´í„°ì˜ í™œìš©ì— í”„ë¡œê·¸ëž˜ë° ê¸°ì´ˆì ì¸ ì§€ì‹ê³¼ ë°©ë²•ì„ í†µí•©ì ìœ¼ë¡œ í•™ìŠµí•˜ê³  ë°ì´í„°ì™€ ê´€ë ¨ëœ ë‹¤ì–‘í•œ í™œìš© ë°©ë²•ì„ ì†Œê°œí•˜ëŠ” ê°•ì˜ ê³¼ëª©ìž…ë‹ˆë‹¤. 
 
 
-## °­ÀÇ Àü ÁØºñ »çÇ×
+## ê°•ì˜ ì „ ì¤€ë¹„ ì‚¬í•­
  
 
 :::{note}
-ÀÌ °­ÀÇ¸¦ ¼ö°­ÇÏ±â À§ÇØ¼­´Â ´ÙÀ½°ú °°Àº °èÁ¤°ú È¯°æÀÌ ÇÊ¿äÇÕ´Ï´Ù.
+ì´ ê°•ì˜ë¥¼ ìˆ˜ê°•í•˜ê¸° ìœ„í•´ì„œëŠ” ë‹¤ìŒê³¼ ê°™ì€ ê³„ì •ê³¼ í™˜ê²½ì´ í•„ìš”í•©ë‹ˆë‹¤.
 
-- Google °³ÀÎ °èÁ¤ ¸¸µé±â
-- [Google Colaboratory](https://colab.research.google.com/) À» ÀÌ¿ëÇÒ ¼ö ÀÖ´Â È¯°æ
+- Google ê°œì¸ ê³„ì • ë§Œë“¤ê¸°
+- [Google Colaboratory](https://colab.research.google.com/) ì„ ì´ìš©í•  ìˆ˜ ìžˆëŠ” í™˜ê²½
 
-ÇÊ¿äÇÑ È¯°æÀ» ÁØºñÇÏ´Â °úÁ¤Àº ´ÙÀ½ [µ¿¿µ»ó ±³Àç](https://youtu.be/gxqjDnO-6VA)¸¦ ÂüÁ¶ÇÏ¼¼¿ä.
+í•„ìš”í•œ í™˜ê²½ì„ ì¤€ë¹„í•˜ëŠ” ê³¼ì •ì€ ë‹¤ìŒ [ë™ì˜ìƒ êµìž¬](https://youtu.be/gxqjDnO-6VA)ë¥¼ ì°¸ì¡°í•˜ì„¸ìš”.
 :::
 
-## ±³Àç
+## êµìž¬
 
-- [¿Â¶óÀÎ ±³Àç](https://jiieunshin.github.io/welfare)
-- [°­ÀÇ¿¡¼­ »ç¿ëÇÑ µ¥ÀÌÅÍ È­ÀÏ](https://uos-bigdata.github.io/lab_data/docs/bokji.html)
+- [ì˜¨ë¼ì¸ êµìž¬](https://jiieunshin.github.io/welfare)
+- [ê°•ì˜ì—ì„œ ì‚¬ìš©í•œ ë°ì´í„° í™”ì¼](https://uos-bigdata.github.io/lab_data/docs/bokji.html)
 
 
